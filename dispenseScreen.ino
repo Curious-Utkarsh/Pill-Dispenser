@@ -31,3 +31,14 @@ void dispenseScreen3()
   tft.setTextSize(2);
   tft.drawCentreString("--SELECTION MODE--", tft.width()/2, 10, 1);
 }
+void dispenseScreen4()
+{
+  tft.fillRoundRect(90, 90, 130, 30, 8, TFT_RED);
+  tft.drawRoundRect(90, 90, 130, 30, 8, TFT_WHITE);
+  tft.fillScreen(TFT_BLACK);
+  tft.setCursor(80, 100);
+  tft.setTextSize(2);
+  tft.setTextColor(TFT_BLACK);
+  tft.print("  SET ALARM");
+  cnt = 1;
+}

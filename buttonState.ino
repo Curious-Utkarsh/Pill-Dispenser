@@ -48,7 +48,19 @@ void buttonState()
   }
   if(currentPage == 2)// Selection Page
   {
+    if(bValue == 1)
     stepperSelect(); //Stepper Motor for Selection Mode
+
+    if(bValue == 0)
+    bValue = 1;
   }
+  }
+  if(bVal == LOW && currentPage != -2)
+  {
+    while(digitalRead(backPin) == LOW)
+    {}
+    currentPage = 0;
+    cnt = 0;
+    bValue = 0;
   }
 }

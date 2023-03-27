@@ -8,3 +8,11 @@ void buzz()
     delay(100);
   }
 }
+
+void buzz1()
+{
+  digitalWrite(led, HIGH);
+  delay(100);
+  digitalWrite(led, LOW);
+  delay(100);
+}

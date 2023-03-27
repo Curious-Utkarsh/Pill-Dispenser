@@ -11,6 +11,14 @@ void timerMode()
     tft.fillRoundRect(10, 15, 300, 22, 8, TFT_GREEN);
     tft.setTextColor(TFT_BLACK);
     tft.drawCentreString("--TIMER MODE--", tft.width()/2, 20, 1);
+
+    tft.fillRoundRect(90, 90, 130, 30, 8, TFT_RED);
+    tft.drawRoundRect(90, 90, 130, 30, 8, TFT_WHITE);
+
+    tft.setCursor(80, 100);
+    tft.setTextSize(2);
+    tft.setTextColor(TFT_BLACK);
+    tft.print("  SET ALARM");
   }
 
 
@@ -37,17 +45,6 @@ void timerMode()
   tft.print(currentTime);
 
   //Set Alarm
-  if(fil == 0)
-  {
-    tft.fillRoundRect(90, 90, 130, 30, 8, TFT_RED);
-    tft.drawRoundRect(90, 90, 130, 30, 8, TFT_WHITE);
-    fil = 1;
-  }
-  tft.setCursor(80, 100);
-  tft.setTextSize(2);
-  tft.setTextColor(TFT_BLACK);
-  tft.print("  SET ALARM");
-
   tft.drawRoundRect(5, 130, 308, 100, 8, TFT_BLUE);
   tft.drawLine(159, 130, 159, 229, TFT_BLUE);
   tft.setCursor(70, 145);
@@ -130,12 +127,14 @@ void timerMode()
   {
     if(dispenseTime == currentTime)
     {
-      digitalWrite(2, HIGH);
-      Serial.println("ON");
-      delay(3000);
+      dispenseScreen1();
+      stepDispense(1);
+      servoDrive();
+      dispenseScreen2();
+      buzz();
+      homePosn();
+      dispenseScreen4();
       Mode = 3;
-      digitalWrite(2, LOW);
-      Serial.println("OFF");
     }
   }
   if(Mode == 3 && digitalRead(selPin) == LOW)

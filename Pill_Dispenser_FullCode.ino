@@ -53,13 +53,14 @@ byte sVal = 0;
 byte pVal = 0;
 byte bVal = 0;
 byte cnt = 0;
-byte fil = 0;
 byte hh = 0;
 byte mm = 0;
 byte cc = 0;
 byte lt = 0;
 byte Lt = 1;
 byte refill = 0;
+byte bValue = 1;
+byte fillCnt = 1;
   
 void setup() 
 {
@@ -194,6 +195,13 @@ void loop()
       cnt = 1;
     }
     timerMode();
+    if(digitalRead(backPin) == LOW && currentPage != -2)
+    {
+      while(digitalRead(backPin) == LOW)
+      {}
+      currentPage = 0;
+      cnt = 0;
+    }
   }
 
   //Selection Mode
@@ -216,5 +224,12 @@ void loop()
       cnt = 1;
     }
     refillMode();
+    if(digitalRead(backPin) == LOW && currentPage != -2)
+    {
+      while(digitalRead(backPin) == LOW)
+      {}
+      currentPage = 0;
+      cnt = 0;
+    }
   }
 }
