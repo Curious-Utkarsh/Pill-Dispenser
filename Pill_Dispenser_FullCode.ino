@@ -47,9 +47,11 @@ byte Mode = 0;//to check if HH or MM
 int currentPage = 0;
 byte cursorPosn = 0; // for homePage
 byte spritePosn = 1; // for selectionPage
+byte sp = 0;
 byte nVal = 0;
 byte sVal = 0;
 byte pVal = 0;
+byte bVal = 0;
 byte cnt = 0;
 byte fil = 0;
 byte hh = 0;
@@ -58,11 +60,11 @@ byte cc = 0;
 byte lt = 0;
 byte Lt = 1;
 byte refill = 0;
-
+  
 void setup() 
 {
-//  Serial.begin(115200);
-//  while(!Serial);
+  Serial.begin(115200);
+  delay(1000);
   SPI.begin();
   delay(10);
   pinMode(wifiPin, INPUT_PULLUP);
@@ -199,7 +201,7 @@ void loop()
   {
     if(cnt == 0)
     {
-      tft.fillScreen(TFT_WHITE);
+      tft.fillScreen(TFT_BLACK);
       cnt = 1;
     }
     selectionMode();

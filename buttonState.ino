@@ -3,6 +3,7 @@ void buttonState()
   nVal = digitalRead(nextPin);
   sVal = digitalRead(selPin);
   pVal = digitalRead(prevPin);
+  bVal = digitalRead(backPin);
 
 //  Serial.println(nVal);
 //  Serial.println(sVal);

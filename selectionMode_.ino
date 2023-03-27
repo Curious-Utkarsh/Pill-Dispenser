@@ -1,6 +1,6 @@
 void selectionMode()
 {
-  tft.drawRoundRect(1, 1, 318, 238, 8, TFT_BLACK); //Page Border
+  tft.drawRoundRect(1, 1, 318, 238, 8, TFT_WHITE); //Page Border
   
   tft.setCursor(60, 10);
   tft.setTextSize(2);

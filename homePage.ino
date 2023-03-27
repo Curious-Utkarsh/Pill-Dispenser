@@ -19,7 +19,7 @@ void homePage()
   tft.setCursor(4, 50);
   tft.setTextSize(2);
   tft.setTextColor(TFT_BLUE);
-  tft.print(" Pill Organizer/Dispenser ");
+  tft.print("   -- SPENCER-PRO 370 --   ");
 
   tft.setTextColor(TFT_BLACK);
   tft.setCursor(63, 195);
