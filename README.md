@@ -26,7 +26,7 @@ ESP32 · NEMA 17 + AccelStepper · servo · TFT_eSPI · SD · NTPClient · WiFiM
 
 ## Related
 
-[RFID canteen payment system](https://github.com/Curious-Utkarsh/Canteen-Management-System) · [Q'Less Pro kiosk](https://github.com/Curious-Utkarsh/Q-Less_Final_Code)
+[RFID canteen payment system](https://github.com/Curious-Utkarsh/rfid-canteen-payment-system) · [Q'Less Pro kiosk](https://github.com/Curious-Utkarsh/qless-pro-ordering-kiosk)
 
 ---
 [Kumar Utkarsh](https://github.com/Curious-Utkarsh) · [LinkedIn](https://www.linkedin.com/in/kumar-utkarsh-124aab227/) · [Portfolio of builds](https://www.mechamindlabs.com/projects)
