@@ -9,6 +9,8 @@ A Wi-Fi-connected pill dispenser that releases medication either for a symptom t
 
 [![Automatic pill dispenser — Spencer Pro 370](https://img.youtube.com/vi/GGR1IZcwPq0/hqdefault.jpg)](https://youtu.be/GGR1IZcwPq0)
 
+Playlist: [Engineering Builds (2022–2026)](https://www.youtube.com/playlist?list=PLPJ4HpDr6h6A)
+
 ## Key features
 
 - **Selection mode** (by symptom) and **timer mode** (scheduled doses using NTP time)
